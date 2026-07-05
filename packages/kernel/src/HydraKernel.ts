@@ -1,5 +1,6 @@
 import { BootManager } from "./boot/BootManager.js";
-import { ServiceRegistry } from "./registry/ServiceRegistry.js";
+import { KernelContext } from "./context/KernelContext.js";
+
 
 /**
  * HYDRA I.OS
@@ -13,34 +14,36 @@ export class HydraKernel {
   /**
    * Kernel service registry.
    */
-  private registry: ServiceRegistry | null = null;
+  private context: KernelContext | null = null;
 
   /**
    * Boots the Hydra Kernel.
    */
-  public start(): void {
+public start(): void {
     const bootManager = new BootManager();
 
-    this.registry = bootManager.start();
-  }
+    const registry = bootManager.start();
 
-  /**
-   * Returns the kernel service registry.
-   */
-  public getRegistry(): ServiceRegistry {
-    if (!this.registry) {
-      throw new Error("Hydra Kernel has not been started.");
+    this.context = new KernelContext(registry);
+}
+
+/**
+ * Returns the kernel context.
+ */
+public getContext(): KernelContext {
+    if (!this.context) {
+        throw new Error("Hydra Kernel has not been started.");
     }
 
-    return this.registry;
-  }
+    return this.context;
+}
 
   /**
    * Indicates whether the kernel has been started.
    */
-  public isRunning(): boolean {
-    return this.registry !== null;
-  }
+public isRunning(): boolean {
+    return this.context !== null;
+}
 
   /**
    * Stops the kernel.
