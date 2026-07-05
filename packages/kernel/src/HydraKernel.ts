@@ -29,7 +29,7 @@ export class HydraKernel {
   /**
    * Returns the kernel context.
    */
-  public getContext(): KernelContext {
+  public Context(): KernelContext {
     if (!this.context) {
       throw new Error("Hydra Kernel has not been started.");
     }
