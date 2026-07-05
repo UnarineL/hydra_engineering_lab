@@ -1,0 +1,1 @@
+{"version":3,"file":"CommandParser.d.ts","sourceRoot":"","sources":["../../../src/commands/parser/CommandParser.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,oBAAoB,CAAC;AAEnD;;;;;;GAMG;AACH,qBAAa,aAAa;IACxB;;OAEG;IACI,KAAK,CAAC,KAAK,EAAE,MAAM,GAAG,aAAa;CAmB3C"}

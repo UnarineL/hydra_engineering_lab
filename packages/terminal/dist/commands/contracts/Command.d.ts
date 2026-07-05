@@ -1,0 +1,24 @@
+import { ParsedCommand } from "../parser/ParsedCommand.js";
+import { CommandResult } from "../models/CommandResult.js";
+/**
+ * HYDRA I.OS
+ * Command Contract
+ *
+ * Every executable Hydra command must
+ * implement this interface.
+ */
+export interface Command {
+    /**
+     * Unique command name.
+     */
+    readonly name: string;
+    /**
+     * Short command description.
+     */
+    readonly description: string;
+    /**
+     * Executes the command.
+     */
+    execute(command: ParsedCommand): CommandResult;
+}
+//# sourceMappingURL=Command.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"RenderBuffer.d.ts","sourceRoot":"","sources":["../../src/buffer/RenderBuffer.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;GAUG;AACH,qBAAa,YAAY;IACvB;;OAEG;IACH,OAAO,CAAC,QAAQ,CAAC,QAAQ,CAAgB;IAEzC;;OAEG;IACI,MAAM,CAAC,OAAO,EAAE,MAAM,GAAG,IAAI;IAIpC;;OAEG;IACI,KAAK,IAAI,IAAI;IAIpB;;OAEG;IACI,MAAM,IAAI,MAAM;IAIvB;;OAEG;IACI,OAAO,IAAI,OAAO;CAG1B"}

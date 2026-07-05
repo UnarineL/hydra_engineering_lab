@@ -1,0 +1,24 @@
+import { ParsedCommand } from "./ParsedCommand.js";
+/**
+ * HYDRA I.OS
+ * Command Parser
+ *
+ * Converts raw terminal input into
+ * a ParsedCommand.
+ */
+export class CommandParser {
+    /**
+     * Parses terminal input.
+     */
+    parse(input) {
+        const raw = input.trim();
+        if (raw.length === 0) {
+            return new ParsedCommand(raw, "", []);
+        }
+        const tokens = raw.split(/\s+/);
+        const command = tokens[0].toLowerCase();
+        const arguments_ = tokens.slice(1);
+        return new ParsedCommand(raw, command, arguments_);
+    }
+}
+//# sourceMappingURL=CommandParser.js.map
