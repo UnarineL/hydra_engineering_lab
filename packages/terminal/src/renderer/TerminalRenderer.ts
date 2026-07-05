@@ -1,20 +1,31 @@
-import { BannerRenderer } from "./BannerRenderer.js";
-import { StatusRenderer } from "./StatusRenderer.js";
-import { PromptRenderer } from "./PromptRenderer.js";
+import { RenderBuffer } from "../buffer/RenderBuffer.js";
 import type { TerminalStatus } from "../models/TerminalStatus.js";
+import { BannerRenderer } from "./BannerRenderer.js";
+import { PromptRenderer } from "./PromptRenderer.js";
+import { StatusRenderer } from "./StatusRenderer.js";
 
+/**
+ * HYDRA I.OS
+ * Terminal Renderer
+ *
+ * Coordinates the rendering pipeline for the Hydra terminal.
+ */
 export class TerminalRenderer {
-    private readonly banner = new BannerRenderer();
-    private readonly status = new StatusRenderer();
-    private readonly prompt = new PromptRenderer();
+  private readonly banner = new BannerRenderer();
+  private readonly status = new StatusRenderer();
+  private readonly prompt = new PromptRenderer();
+  private readonly buffer = new RenderBuffer();
 
-    public render(status: TerminalStatus): void {
-        const output = [
-            this.banner.render(),
-            this.status.render(status),
-            this.prompt.render(status.session),
-        ].join("\n");
+  /**
+   * Renders the complete Hydra terminal.
+   */
+  public render(status: TerminalStatus): void {
+    this.buffer.clear();
 
-        console.log(output);
-    }
+    this.buffer.append(this.banner.render());
+    this.buffer.append(this.status.render(status));
+    this.buffer.append(this.prompt.render(status.session));
+
+    console.log(this.buffer.render());
+  }
 }
