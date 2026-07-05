@@ -1,0 +1,16 @@
+{
+	"name": "hydra",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Hydra Engineering Lab",
+	"type": "module",
+	"devDependencies": {
+		"electron": "^43.0.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.1.3"
+	},
+	"dependencies": {
+		"react": "^19.2.7",
+		"react-dom": "^19.2.7"
+	} 
+}
