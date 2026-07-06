@@ -19,5 +19,18 @@
 		"dev": "pnpm -r dev",
 		"clean": "pnpm -r clean",
 		"typecheck": "pnpm -r typecheck"
-	}
+	},
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/kernel"
+    },
+    {
+      "path": "./packages/terminal"
+    },
+    {
+      "path": "./apps/hydra-cli"
+    }
+  ]
+
 }

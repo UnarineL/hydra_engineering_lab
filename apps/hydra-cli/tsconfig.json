@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "composite": true
+  },
+
+  "references": [
+    {
+      "path": "../../packages/kernel"
+    },
+    {
+      "path": "../../packages/terminal"
+    }
+  ],
+
+  "include": [
+    "src/**/*.ts"
+  ]
+}

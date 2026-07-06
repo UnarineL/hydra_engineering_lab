@@ -1,0 +1,1 @@
+{"version":3,"file":"StatusRenderer.d.ts","sourceRoot":"","sources":["../../src/renderer/StatusRenderer.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,6BAA6B,CAAC;AAElE,qBAAa,cAAc;IAChB,MAAM,CAAC,MAAM,EAAE,cAAc,GAAG,MAAM;CAehD"}

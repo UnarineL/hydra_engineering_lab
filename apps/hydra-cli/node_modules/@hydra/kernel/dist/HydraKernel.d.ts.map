@@ -1,0 +1,1 @@
+{"version":3,"file":"HydraKernel.d.ts","sourceRoot":"","sources":["../src/HydraKernel.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,aAAa,EAAE,MAAM,4BAA4B,CAAC;AAE3D;;;;;;;GAOG;AACH,qBAAa,WAAW;IACtB;;OAEG;IACH,OAAO,CAAC,OAAO,CAA8B;IAE7C;;OAEG;IACI,KAAK,IAAI,IAAI;IAQpB;;OAEG;IACI,OAAO,IAAI,aAAa;IAQ/B;;OAEG;IACI,SAAS,IAAI,OAAO;IAI3B;;;;OAIG;IACI,IAAI,IAAI,IAAI;CAIpB"}
