@@ -6,6 +6,9 @@
     },
     {
       "path": "./packages/terminal"
+    },
+    {
+      "path": "./apps/hydra-cli"
     }
   ]
 }
